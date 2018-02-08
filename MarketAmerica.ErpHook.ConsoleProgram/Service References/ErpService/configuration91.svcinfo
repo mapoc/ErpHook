@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="UMkgw3f+rga917pGJOnNDA1jfOk=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="haZpN3GjfVqouXG2B6bx8sy6RBU=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="ErpHookServiceSoapBinding">
       <properties>
@@ -221,10 +221,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="ErpHookPort" contract="ErpService.ErpHook" bindingType="basicHttpBinding" address="https://apisb.shop.com/ErpHookService/v1/SOAP11" bindingConfiguration="ErpHookServiceSoapBinding">
+    <endpoint name="ErpHookPort" contract="ErpService.ErpHook" bindingType="basicHttpBinding" address="https://api.shop.com/services/ErpHookService" bindingConfiguration="ErpHookServiceSoapBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://apisb.shop.com/ErpHookService/v1/SOAP11</serializedValue>
+          <serializedValue>https://api.shop.com/services/ErpHookService</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <wsdl:definitions xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://impl.api.marketamerica.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://api.marketamerica.com/" name="ErpHookService" targetNamespace="http://impl.api.marketamerica.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-  <wsdl:import namespace="http://api.marketamerica.com/" location="http://dev-mwgso-api.marketamerica.com/erp-hook-micro/services/ErpHookService?wsdl=ErpHook.wsdl" />
+  <wsdl:import namespace="http://api.marketamerica.com/" location="https://api.shop.com/ssg/wsdl/ErpHookService?serviceoid=e57ba26b9a66b30047aa6641c458f3bf&amp;servdocoid=e57ba26b9a66b30047aa6641c45a1527" />
   <wsdl:types />
   <wsdl:binding name="ErpHookServiceSoapBinding" type="ns1:ErpHook">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -25,7 +25,7 @@
   </wsdl:binding>
   <wsdl:service name="ErpHookService">
     <wsdl:port name="ErpHookPort" binding="tns:ErpHookServiceSoapBinding">
-      <soap:address location="https://apisb.shop.com/ErpHookService/v1/SOAP11" />
+      <soap:address location="https://api.shop.com/services/ErpHookService" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
