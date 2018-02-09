@@ -53,11 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Service References\ErpService\ErpHook.wsdl" />
-    <None Include="Service References\ErpService\ErpHookService.wsdl" />
-    <None Include="Service References\ErpService\MarketAmerica.ErpHook.ConsoleProgram.ErpService.erpHookResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
+    <None Include="Service References\ErpService\ErpHook1.wsdl" />
+    <None Include="Service References\ErpService\ErpHookService1.wsdl" />
     <None Include="Service References\ErpService\MarketAmerica.ErpHook.ConsoleProgram.ErpService.setErpDataResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

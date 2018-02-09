@@ -33,7 +33,7 @@ namespace MarketAmerica.ErpHook.ConsoleProgram
 
             var response = client.setErpData(xmlMessage);
 
-            Console.WriteLine("Response Status: " + response.status);
+            Console.WriteLine("Response Status: " + response);
             Console.ReadLine();
         }
     }

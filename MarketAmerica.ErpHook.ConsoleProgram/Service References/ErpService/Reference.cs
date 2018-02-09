@@ -15,367 +15,51 @@ namespace MarketAmerica.ErpHook.ConsoleProgram.ErpService {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://api.marketamerica.com/", ConfigurationName="ErpService.ErpHook")]
     public interface ErpHook {
         
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        // CODEGEN: Generating message contract since element name arg0 from namespace  is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(serviceResponse))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         MarketAmerica.ErpHook.ConsoleProgram.ErpService.setErpDataResponse setErpData(MarketAmerica.ErpHook.ConsoleProgram.ErpService.setErpData request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<MarketAmerica.ErpHook.ConsoleProgram.ErpService.setErpDataResponse> setErpDataAsync(MarketAmerica.ErpHook.ConsoleProgram.ErpService.setErpData request);
         
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        // CODEGEN: Generating message contract since element name return from namespace  is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(serviceResponse))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         MarketAmerica.ErpHook.ConsoleProgram.ErpService.testResponse test(MarketAmerica.ErpHook.ConsoleProgram.ErpService.test request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<MarketAmerica.ErpHook.ConsoleProgram.ErpService.testResponse> testAsync(MarketAmerica.ErpHook.ConsoleProgram.ErpService.test request);
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.marketamerica.com/")]
-    public partial class erpHookResponse : serviceResponse {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(erpHookResponse))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.marketamerica.com/")]
-    public abstract partial class serviceResponse : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class setErpData {
         
-        private responseError[] errorsField;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="setErpData", Namespace="http://api.marketamerica.com/", Order=0)]
+        public MarketAmerica.ErpHook.ConsoleProgram.ErpService.setErpDataBody Body;
         
-        private universeResponse legacyResponseField;
-        
-        private statusType statusField;
-        
-        private bool statusFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("errors", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
-        public responseError[] errors {
-            get {
-                return this.errorsField;
-            }
-            set {
-                this.errorsField = value;
-                this.RaisePropertyChanged("errors");
-            }
+        public setErpData() {
         }
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public universeResponse legacyResponse {
-            get {
-                return this.legacyResponseField;
-            }
-            set {
-                this.legacyResponseField = value;
-                this.RaisePropertyChanged("legacyResponse");
-            }
+        public setErpData(MarketAmerica.ErpHook.ConsoleProgram.ErpService.setErpDataBody Body) {
+            this.Body = Body;
         }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public statusType status {
-            get {
-                return this.statusField;
-            }
-            set {
-                this.statusField = value;
-                this.RaisePropertyChanged("status");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool statusSpecified {
-            get {
-                return this.statusFieldSpecified;
-            }
-            set {
-                this.statusFieldSpecified = value;
-                this.RaisePropertyChanged("statusSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.marketamerica.com/")]
-    public partial class responseError : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string errorCodeField;
-        
-        private string errorMessageField;
-        
-        private severityType severityField;
-        
-        private bool severityFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string errorCode {
-            get {
-                return this.errorCodeField;
-            }
-            set {
-                this.errorCodeField = value;
-                this.RaisePropertyChanged("errorCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string errorMessage {
-            get {
-                return this.errorMessageField;
-            }
-            set {
-                this.errorMessageField = value;
-                this.RaisePropertyChanged("errorMessage");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public severityType severity {
-            get {
-                return this.severityField;
-            }
-            set {
-                this.severityField = value;
-                this.RaisePropertyChanged("severity");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool severitySpecified {
-            get {
-                return this.severityFieldSpecified;
-            }
-            set {
-                this.severityFieldSpecified = value;
-                this.RaisePropertyChanged("severitySpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.marketamerica.com/")]
-    public enum severityType {
-        
-        /// <remarks/>
-        CRITICAL,
-        
-        /// <remarks/>
-        WARNING,
-        
-        /// <remarks/>
-        VALIDATION,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.marketamerica.com/")]
-    public partial class universeResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string serverControlCodeField;
-        
-        private string serverControlNameField;
-        
-        private System.DateTime serverLastDateField;
-        
-        private bool serverLastDateFieldSpecified;
-        
-        private System.DateTime serverLastTimeField;
-        
-        private bool serverLastTimeFieldSpecified;
-        
-        private string serverMessageField;
-        
-        private int serverStatusField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string serverControlCode {
-            get {
-                return this.serverControlCodeField;
-            }
-            set {
-                this.serverControlCodeField = value;
-                this.RaisePropertyChanged("serverControlCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string serverControlName {
-            get {
-                return this.serverControlNameField;
-            }
-            set {
-                this.serverControlNameField = value;
-                this.RaisePropertyChanged("serverControlName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime serverLastDate {
-            get {
-                return this.serverLastDateField;
-            }
-            set {
-                this.serverLastDateField = value;
-                this.RaisePropertyChanged("serverLastDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool serverLastDateSpecified {
-            get {
-                return this.serverLastDateFieldSpecified;
-            }
-            set {
-                this.serverLastDateFieldSpecified = value;
-                this.RaisePropertyChanged("serverLastDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime serverLastTime {
-            get {
-                return this.serverLastTimeField;
-            }
-            set {
-                this.serverLastTimeField = value;
-                this.RaisePropertyChanged("serverLastTime");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool serverLastTimeSpecified {
-            get {
-                return this.serverLastTimeFieldSpecified;
-            }
-            set {
-                this.serverLastTimeFieldSpecified = value;
-                this.RaisePropertyChanged("serverLastTimeSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string serverMessage {
-            get {
-                return this.serverMessageField;
-            }
-            set {
-                this.serverMessageField = value;
-                this.RaisePropertyChanged("serverMessage");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int serverStatus {
-            get {
-                return this.serverStatusField;
-            }
-            set {
-                this.serverStatusField = value;
-                this.RaisePropertyChanged("serverStatus");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.marketamerica.com/")]
-    public enum statusType {
-        
-        /// <remarks/>
-        SUCCESS,
-        
-        /// <remarks/>
-        FAILURE,
-        
-        /// <remarks/>
-        WARNING,
-        
-        /// <remarks/>
-        ERROR,
-        
-        /// <remarks/>
-        TIMEOUT,
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="setErpData", WrapperNamespace="http://api.marketamerica.com/", IsWrapped=true)]
-    public partial class setErpData {
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class setErpDataBody {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.marketamerica.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
         public string arg0;
         
-        public setErpData() {
+        public setErpDataBody() {
         }
         
-        public setErpData(string arg0) {
+        public setErpDataBody(string arg0) {
             this.arg0 = arg0;
         }
     }
@@ -383,17 +67,33 @@ namespace MarketAmerica.ErpHook.ConsoleProgram.ErpService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="setErpDataResponse", WrapperNamespace="http://api.marketamerica.com/", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class setErpDataResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.marketamerica.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public MarketAmerica.ErpHook.ConsoleProgram.ErpService.erpHookResponse @return;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="setErpDataResponse", Namespace="http://api.marketamerica.com/", Order=0)]
+        public MarketAmerica.ErpHook.ConsoleProgram.ErpService.setErpDataResponseBody Body;
         
         public setErpDataResponse() {
         }
         
-        public setErpDataResponse(MarketAmerica.ErpHook.ConsoleProgram.ErpService.erpHookResponse @return) {
+        public setErpDataResponse(MarketAmerica.ErpHook.ConsoleProgram.ErpService.setErpDataResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class setErpDataResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string @return;
+        
+        public setErpDataResponseBody() {
+        }
+        
+        public setErpDataResponseBody(string @return) {
             this.@return = @return;
         }
     }
@@ -401,27 +101,60 @@ namespace MarketAmerica.ErpHook.ConsoleProgram.ErpService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="test", WrapperNamespace="http://api.marketamerica.com/", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class test {
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="test", Namespace="http://api.marketamerica.com/", Order=0)]
+        public MarketAmerica.ErpHook.ConsoleProgram.ErpService.testBody Body;
+        
         public test() {
+        }
+        
+        public test(MarketAmerica.ErpHook.ConsoleProgram.ErpService.testBody Body) {
+            this.Body = Body;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="testResponse", WrapperNamespace="http://api.marketamerica.com/", IsWrapped=true)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class testBody {
+        
+        public testBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class testResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.marketamerica.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="testResponse", Namespace="http://api.marketamerica.com/", Order=0)]
+        public MarketAmerica.ErpHook.ConsoleProgram.ErpService.testResponseBody Body;
         
         public testResponse() {
         }
         
-        public testResponse(string @return) {
+        public testResponse(MarketAmerica.ErpHook.ConsoleProgram.ErpService.testResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class testResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string @return;
+        
+        public testResponseBody() {
+        }
+        
+        public testResponseBody(string @return) {
             this.@return = @return;
         }
     }
@@ -458,11 +191,12 @@ namespace MarketAmerica.ErpHook.ConsoleProgram.ErpService {
             return base.Channel.setErpData(request);
         }
         
-        public MarketAmerica.ErpHook.ConsoleProgram.ErpService.erpHookResponse setErpData(string arg0) {
+        public string setErpData(string arg0) {
             MarketAmerica.ErpHook.ConsoleProgram.ErpService.setErpData inValue = new MarketAmerica.ErpHook.ConsoleProgram.ErpService.setErpData();
-            inValue.arg0 = arg0;
+            inValue.Body = new MarketAmerica.ErpHook.ConsoleProgram.ErpService.setErpDataBody();
+            inValue.Body.arg0 = arg0;
             MarketAmerica.ErpHook.ConsoleProgram.ErpService.setErpDataResponse retVal = ((MarketAmerica.ErpHook.ConsoleProgram.ErpService.ErpHook)(this)).setErpData(inValue);
-            return retVal.@return;
+            return retVal.Body.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -472,7 +206,8 @@ namespace MarketAmerica.ErpHook.ConsoleProgram.ErpService {
         
         public System.Threading.Tasks.Task<MarketAmerica.ErpHook.ConsoleProgram.ErpService.setErpDataResponse> setErpDataAsync(string arg0) {
             MarketAmerica.ErpHook.ConsoleProgram.ErpService.setErpData inValue = new MarketAmerica.ErpHook.ConsoleProgram.ErpService.setErpData();
-            inValue.arg0 = arg0;
+            inValue.Body = new MarketAmerica.ErpHook.ConsoleProgram.ErpService.setErpDataBody();
+            inValue.Body.arg0 = arg0;
             return ((MarketAmerica.ErpHook.ConsoleProgram.ErpService.ErpHook)(this)).setErpDataAsync(inValue);
         }
         
@@ -483,8 +218,9 @@ namespace MarketAmerica.ErpHook.ConsoleProgram.ErpService {
         
         public string test() {
             MarketAmerica.ErpHook.ConsoleProgram.ErpService.test inValue = new MarketAmerica.ErpHook.ConsoleProgram.ErpService.test();
+            inValue.Body = new MarketAmerica.ErpHook.ConsoleProgram.ErpService.testBody();
             MarketAmerica.ErpHook.ConsoleProgram.ErpService.testResponse retVal = ((MarketAmerica.ErpHook.ConsoleProgram.ErpService.ErpHook)(this)).test(inValue);
-            return retVal.@return;
+            return retVal.Body.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -494,6 +230,7 @@ namespace MarketAmerica.ErpHook.ConsoleProgram.ErpService {
         
         public System.Threading.Tasks.Task<MarketAmerica.ErpHook.ConsoleProgram.ErpService.testResponse> testAsync() {
             MarketAmerica.ErpHook.ConsoleProgram.ErpService.test inValue = new MarketAmerica.ErpHook.ConsoleProgram.ErpService.test();
+            inValue.Body = new MarketAmerica.ErpHook.ConsoleProgram.ErpService.testBody();
             return ((MarketAmerica.ErpHook.ConsoleProgram.ErpService.ErpHook)(this)).testAsync(inValue);
         }
     }
