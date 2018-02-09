@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://api.shop.com/services/ErpHookService?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://dev-mwgso-api.marketamerica.com/erp-hook-micro/services/ErpHookService?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ErpHookService1.wsdl" MetadataType="Wsdl" ID="ac3fdde9-eb80-4796-a649-f1719d004333" SourceId="1" SourceUrl="https://api.shop.com/services/ErpHookService?wsdl" />
-    <MetadataFile FileName="ErpHook1.wsdl" MetadataType="Wsdl" ID="17c46dc6-21fb-47df-bca7-293734ce9575" SourceId="1" SourceUrl="https://api.shop.com/ssg/wsdl/ErpHookService?serviceoid=e57ba26b9a66b30047aa6641c458f3bf&amp;servdocoid=e57ba26b9a66b30047aa6641c45a1527" />
+    <MetadataFile FileName="ErpHook.wsdl" MetadataType="Wsdl" ID="31e4aaf3-7ad5-4319-9167-7808a7c20d71" SourceId="1" SourceUrl="http://dev-mwgso-api.marketamerica.com/erp-hook-micro/services/ErpHookService?wsdl=ErpHook.wsdl" />
+    <MetadataFile FileName="ErpHookService.wsdl" MetadataType="Wsdl" ID="ff9207f1-1481-4f3a-af77-7f16d48933c3" SourceId="1" SourceUrl="http://dev-mwgso-api.marketamerica.com/erp-hook-micro/services/ErpHookService?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
